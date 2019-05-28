@@ -1,0 +1,7 @@
+<view class='login_contianer'>
+  <image class='login_bg' src='../../images/login.png'></image>
+  <text>注册</text>
+  <input class='text_input' placeholder='请输入用户名' bindinput='inputusername' maxlength='15'></input>
+  <input class='text_input' placeholder='请输入密码' bindinput='inputpassword' maxlength='15'></input>
+  <button bindtap='register' class='btn_login'>注册</button>
+</view>

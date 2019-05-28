@@ -1,0 +1,13 @@
+
+<view class='contianer'>
+  <view class='search_bg'>
+    <icon type='search' class='icon_search'></icon>
+    <input class='input_search' placeholder='请输入关键字' bindinput='searchInput' value='{{inputValue}}'></input>
+    <icon type='clear' class='clear_class' size='14px' hidden='{{inputValue.length==0}}' bindtap='clearInput'></icon>
+  </view>
+  <text class='text_search'>搜索</text>
+</view>
+<view class='text_content'>大家都在搜</view>
+<view class='tag_continaer'>
+  <view class='search_tag' bindtap='onTagClick' wx:index='index' wx:for='{{tagList}}' data-name='{{item.name}}'>{{item.name}}</view>
+</view>
