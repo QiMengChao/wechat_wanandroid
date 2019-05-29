@@ -23,12 +23,11 @@
 .input_search{
   font-size: 14px;
   margin-left: 5px;
-  flex: auto;
+  flex: 1;
 }
 .text_search{
-  flex: auto;
   background-color: transparent;
-  margin-right: 5px;
+  margin-left: 20rpx;
 }
 .clear_class{
   align-content: right;
@@ -48,4 +47,53 @@
   border: 1px solid#d0d0d0;
   font-size: 14px;
   border-radius: 30rpx;
+}
+
+.home-item-article{
+  background-color: darkgray;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  margin: 10px;
+}
+
+.home-article-item1{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  align-items: center;
+}
+.home-item-authorgb{
+  width: 50rpx;
+  height: 50rpx;
+}
+.home-item-author{
+  color: blue;
+  margin-left: 10rpx;
+  font-size: 16px;
+   flex: 1;
+}
+.home-item-date{
+  font-size: 16px;
+  align-content: right;
+}
+.home-item-title{
+  padding-top: 20rpx;
+  display: flex;
+  font-size: 16px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.home-aritcle-item2{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+.home-item-chapter{
+  margin-left: 30rpx;
+  font-size: 16px;
+  color: blue;
+}
+.home-item-space{
+  flex: 1;
 }

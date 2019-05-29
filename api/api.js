@@ -33,4 +33,22 @@ export default{
     const result = apiBase.request(interfaces.INTERFACE_HOT_KEY, params, "GET");
     return result;
   },
+  queryArticle(page, params) {
+    const result = apiBase.request("/article/query/" + (page - 1) + "/json", params, "POST");
+    return result;
+  },
+  getTree(params){
+    const result = apiBase.request("/tree/json",params,"GET");
+    return result;
+  },
+  ///article/list/0/json?cid=60
+  showTreeContent(page,params){
+    const result = apiBase.request("/article/list/"+(page-1)+"/json",params,"GET");
+    return result;
+  },
+  //friend/json
+  oftenWeb(params){
+    const result = apiBase.request("/friend/json",params,"GET");
+    return result;
+  },
 }

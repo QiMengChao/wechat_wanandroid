@@ -1,1 +1,61 @@
-/* pages/content/content.wxss */
+.tag_view{
+  display: flex;
+  flex-direction: row;
+}
+.tag{
+  font-size: 15px;
+  margin-left: 10rpx;
+}
+/**
+*类型未选中的样式
+*/
+.normal{
+  text-align: center;
+  font-size: 14px;
+  white-space:nowrap;
+  flex-grow: 1;
+  width: auto;
+  margin-left: 20rpx;
+  color: black;
+}
+/**
+*类型选中的样式
+*/
+.select {
+  text-align: center;
+  font-size: 14px;
+  white-space:nowrap;
+  flex-grow: 1;
+  width: auto;
+  margin-left: 20rpx;
+  color: #1296db;
+  border-bottom: 4rpx solid #1296db;
+  padding-bottom: 5px;
+}
+.item1_view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contianer{
+  background-color: darkgray;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  margin: 10rpx;
+}
+.item2_view{
+  flex: 1;
+  font-size: 16px;
+  margin-left: 10rpx;
+  color: blue;
+}
+.item3_view{
+  font-size: 16px;
+}
+.item4_view{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.view_space{
+  flex: 1;
+}

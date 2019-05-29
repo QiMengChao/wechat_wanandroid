@@ -1,2 +1,12 @@
-<!--pages/navigation/navigation.wxml-->
-<text>pages/navigation/navigation.wxml</text>
+<text class='title'>大家都在搜</text>
+<view class='item_background'>
+  <block wx:for='{{hotList}}' wx:key='{{index}}'>
+    <text class='item_container' style='color:{{colorArr[index%hotList.length]}}' data-name='{{item.name}}' bindtap='hotClick'>{{item.name}}</text>
+  </block>
+</view>
+<text class='title'>常用网站</text>
+<view class='item_background'>
+  <block wx:for='{{friendList}}' wx:key='{{index}}'>
+   <text class='item_container' style='color:{{colorArr[index%hotList.length]}}' data-url='{{item.link}}' bindtap='friendClick'>{{item.name}}</text>
+  </block>
+</view>

@@ -1,1 +1,18 @@
-/* pages/navigation/navigation.wxss */
+.title{
+  font-size: 18px;
+}
+.item_background{
+  background-color: #f5f5f5;
+  padding: 10rpx;
+  margin: 10rpx;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+.item_container{
+  background: white;
+  font-size: 16px;
+  padding: 10rpx;
+  margin: 10rpx;
+  border-radius: 50rpx;
+}

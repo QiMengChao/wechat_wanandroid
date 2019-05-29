@@ -1,2 +1,8 @@
-<!--pages/system/system.wxml-->
-<text>pages/system/system.wxml</text>
+<view class='contianer'>
+  <view wx:for='{{treeList}}' class='parent' wx:for-index='idx'>
+    <view class='oneTree'>{{item.name}}</view>
+    <view wx:for='{{item.children}}' bindtap='onTagClick' data-index='{{idx}}'>
+      <button class='tag' style='background-color:{{colorArr[index%colorArr.length]}}'><text>{{item.name}}</text></button>
+    </view>
+  </view>
+</view>

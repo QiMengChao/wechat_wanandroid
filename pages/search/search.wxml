@@ -5,9 +5,29 @@
     <input class='input_search' placeholder='请输入关键字' bindinput='searchInput' value='{{inputValue}}'></input>
     <icon type='clear' class='clear_class' size='14px' hidden='{{inputValue.length==0}}' bindtap='clearInput'></icon>
   </view>
-  <text class='text_search'>搜索</text>
+  <text class='text_search' bindtap='btn_search'>搜索</text>
 </view>
 <view class='text_content'>大家都在搜</view>
 <view class='tag_continaer'>
   <view class='search_tag' bindtap='onTagClick' wx:index='index' wx:for='{{tagList}}' data-name='{{item.name}}'>{{item.name}}</view>
+</view>
+<view style='margin-bottom:10px'>
+  <view class='home-item-article' wx:for='{{articleList}}' wx:key='{{index}}' data-url='{{item.link}}' bindtap='onItemClick'>
+    <view class='home-article-item1'>
+      <image class='home-item-authorgb' src='../../images/avatar.png'></image>
+      <view class='home-item-author'>{{item.author}}</view>
+      <view class='home-item-date'>{{item.niceDate}}</view>
+    </view>
+    <rich-text class='home-item-title' nodes='{{item.title}}'>{{item.title}}</rich-text>
+    <view class='home-aritcle-item2'>
+      <view class='home-item-chapter'>{{item.chapterName}}</view>
+      <view class='home-item-space'></view>
+      <image class='home-item-collect' style='width:50rpx;height:50rpx' src='{{item.collect? "../../images/collected.png":"../../images/collect.png"}}' catchtap='collect' data-id='{{item.id}}' data-zan='{{item.collect}}' data-index='{{index}}'></image>
+    </view>
+  </view>
+</view>
+
+<view class="weui-loadmore" wx:if="{{isLoadingMore}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
 </view>

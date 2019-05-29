@@ -2,7 +2,7 @@
   <image class='login_bg' src='../../images/login.png'></image>
   <text>登录</text>
   <input class='text_input' placeholder='请输入用户名' bindinput='inputusername' maxlength='15'></input>
-  <input class='text_input' placeholder='请输入密码' bindinput='inputpassword' maxlength='15'></input>
+  <input class='text_input' placeholder='请输入密码' bindinput='inputpassword' maxlength='15' password='true'></input>
   <text class='text_register' bindtap='goRegister'>没有账号？去注册</text>
   <button bindtap='login' class='btn_login'>登录</button>
 </view>

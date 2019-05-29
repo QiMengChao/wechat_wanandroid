@@ -1,1 +1,55 @@
-/* pages/mine/mine.wxss */
+.head{
+  display: flex;
+  flex-direction: column;
+  height: 270rpx;
+  width: 100%;
+  align-items: center;
+  background-color: blue;
+}
+.mine_avatar{
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 60rpx;
+  border-radius: 50%;
+  background-color: white;
+  padding: 20rpx;
+}
+.login_btn{
+  border: 1px solid black;
+  font-size: 12px;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  color: black;
+  height: 30rpx;
+  padding: 10rpx;
+}
+.item_view{
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx;
+  padding: 10rpx;
+}
+.item_img{
+  height: 40rpx;
+  width: 40rpx;
+
+}
+.item_text{
+  flex: 1;
+  margin-left: 10rpx;
+  font-size: 16px;
+}
+.item_arrow{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 10rpx;
+}
+.btn_exit{
+  width: 50%;
+  height: 80rpx;
+  align-content: center;
+  background-color: blue;
+  font-size: 16px;
+  margin-top: 80rpx;
+  color: white;
+}

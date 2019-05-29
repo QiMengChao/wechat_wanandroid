@@ -1,2 +1,26 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class='head'>
+  <image class='mine_avatar' src='../../images/login.png'></image>
+  <view class='login_btn' wx:if='{{!loginBean}}' bindtap='login'>登录/注册</view>
+  <view>{{loginBean.username}}</view>
+</view>
+<view class='item_view' bindtap='myCollect'>
+  <image class='item_img' src='../../images/mycollect.png'></image>
+  <view class='item_text'>我的收藏</view>
+  <image class='item_arrow' src='../../images/ic_arrow.png'></image>
+</view>
+<view class='item_view'>
+  <image class='item_img' src='../../images/knowledge.png'></image>
+  <view class='item_text'>添加待办</view>
+  <image class='item_arrow' src='../../images/ic_arrow.png'></image>
+</view>
+<view class='item_view'>
+  <image class='item_img' src='../../images/todo.png'></image>
+  <view class='item_text'>待办清单</view>
+  <image class='item_arrow' src='../../images/ic_arrow.png'></image>
+</view>
+<view class='item_view'>
+  <image class='item_img' src='../../images/about.png'></image>
+  <view class='item_text'>关于我们</view>
+  <image class='item_arrow' src='../../images/ic_arrow.png'></image>
+</view>
+<button class='btn_exit' bindtap='btn_exit' wx:if='{{loginBean}}'>退出登录</button>

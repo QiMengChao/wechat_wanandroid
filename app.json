@@ -20,7 +20,7 @@
     "navigationBarTitleText": "WanAndroid",
     "navigationBarTextStyle": "black",
     "navigationStyle":"default",
-    "backgroundColor": "#89ee00"
+    "backgroundColor": "#D3D3D3"
   },
   "tabBar": {
     "color": "#707070",
@@ -41,7 +41,7 @@
       "iconPath": "images/project.png",
       "selectedIconPath": "images/project_selected.png"
     },{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/mine/mine",
       "text": "我的",
       "iconPath": "images/mine.png",
       "selectedIconPath": "images/mine_selected.png"

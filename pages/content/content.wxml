@@ -1,2 +1,26 @@
-<!--pages/content/content.wxml-->
-<text>pages/content/content.wxml</text>
+<scroll-view scroll-x="true">
+<view class='tag_view'>
+  <text class='{{currentIndex==index?"select":"normal"}}' wx:for='{{treeList}}' bindtap='switchNav' data-index='{{index}}'>{{item.name}}</text>
+</view>
+</scroll-view>
+<swiper bindchange='bindchange' current='{{currentIndex}}' style='height:{{windowsHeight}}px;width:{{windowsWidth}}px'>
+  <swiper-item wx:for='{{treeList}}'>
+  <view wx:for='{{tagContentList}}' class='contianer' bindtap='itemClick' data-index='{{index}}'>
+    <view class='item1_view'>
+      <image src='../../images/avatar.png' style='height:50rpx;width:50rpx'></image>
+      <view class='item2_view'>{{item.author}}</view>
+      <view class='item3_view'>{{item.niceDate}}</view>
+    </view>
+    <view class='item4_view'>{{item.title}}</view>
+    <view class='item1_view'>
+      <view class='item2_view'>{{item.superChapterName}}</view>
+      <view class='view_space'></view>
+      <image style='width:50rpx;height:50rpx;' src='{{item.collect? "../../images/collected.png":"../../images/collect.png"}}'></image>
+    </view>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="weui-loadmore" wx:if="{{isLoadingMore}}">
+  <view class="weui-loading"></view>
+  <view class="weui-loadmore__tips">正在加载</view>
+</view>

@@ -1,11 +1,13 @@
 // pages/mine/mine.js
+import api from "../../api/api.js";
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    loginBean:wx.getStorageSync("loginBean")
   },
 
   /**
@@ -26,7 +28,45 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setData({loginBean:wx.getStorageSync("loginBean")})
+  },
 
+  login(){
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
+  },
+  btn_exit(){
+    var my = this;
+    if(Object.keys(this.data.loginBean).length===0){
+      wx.showToast({
+        title: '已经是未登录状态了',
+        icon:'none',
+        duration:10000
+      })
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '确定退出登录？',
+        success: function (e) {
+          if (e.confirm) {
+            wx.clearStorageSync()
+            my.setData({ loginBean: wx.getStorageSync("loginBean") })
+          }
+        }
+      })
+    }
+  },
+  myCollect(){
+    if(app.isLogin()) {
+      wx.navigateTo({
+        url: '/pages/collect/collect',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
   },
 
   /**
