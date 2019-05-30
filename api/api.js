@@ -51,4 +51,9 @@ export default{
     const result = apiBase.request("/friend/json",params,"GET");
     return result;
   },
+  ///lg/uncollect/2805/json
+  myCollect(page,params){
+    const result = apiBase.request("/lg/collect/list/"+(page-1)+"/json",params,"GET");
+    return result;
+  },
 }

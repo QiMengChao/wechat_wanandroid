@@ -1,18 +1,24 @@
 // pages/collect/collect.js
+import api from "../../api/api.js";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    collectList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    api.myCollect(1)
+        .then(res=>{
+          console.log(res)
+          this.setData({collectList:res.data.datas})
+        })
   },
 
   /**

@@ -1,1 +1,64 @@
 /* pages/collect/collect.wxss */
+.home-item-article{
+  border-radius: 8px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: rgba(128, 128, 128, 0.253);
+  margin-top: 10rpx;
+}
+.home-article-item1{
+  padding-top: 20rpx;
+  display: flex;
+  padding-left: 30rpx;
+  flex-direction: row;
+  align-items: center;
+  /* border-top: 10rpx solid #f5f5f5; */
+}
+
+.home-article-item2{
+  padding-top: 20rpx;
+  display: flex;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-bottom: 20rpx;
+  align-items: center
+}
+.home-item-author{
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 14px;
+  color: #1296db;
+}
+
+.home-item-date{
+  margin-right: 20rpx;
+  font-size: 14px;
+  color: gray
+}
+.home-item-authorbg{
+  background-color: white;
+  padding: 5rpx;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #fff;
+}
+.home-item-title{
+  padding-top: 20rpx;
+  display: flex;
+  font-size: 16px;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+
+.home-item-space{
+  flex: 1
+}
+
+.home-item-chapter{
+  color: #1296db;
+  font-size: 14px;
+}

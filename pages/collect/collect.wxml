@@ -1,2 +1,18 @@
-<!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+ <view class='home-item-article' wx:for="{{collectList}}" wx:key="index" data-url='{{item.link}}' bindtap='onItemClick'>
+
+    <view class='home-article-item1'>
+      <image class='home-item-authorbg' src='../../images/avatar.png'></image>
+      <view class='home-item-author'>{{item.author}}</view>
+      <view class='home-item-date'>{{item.niceDate}}</view>
+    </view>
+
+    <text class='home-item-title'>{{item.title}}</text>
+
+    <view class='home-article-item2'>
+      <view class='home-item-chapter'>{{item.chapterName}}</view>
+      <view class='home-item-space'></view>
+      <image class='home-item-collect' style='width:50rpx; height:50rpx'  
+      src='{{"../../images/collected.png"}}'
+      catchtap='collect' data-id='{{item.originId}}' data-zan='{{item.collect}}' data-index='{{index}}'></image>  
+    </view>
+  </view>

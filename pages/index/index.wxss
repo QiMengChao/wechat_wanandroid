@@ -78,6 +78,8 @@
   font-size: 16px;
   margin-left: 30rpx;
   margin-right: 30rpx;
+  width: 100%;
+  text-align: right;
 }
 
 .home-item-chapter{
